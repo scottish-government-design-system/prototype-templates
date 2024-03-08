@@ -1,0 +1,127 @@
+{# !!!! The Task list page pattern is currently being reviewed and is subject to change !!!! #}
+
+{% extends "sg-prototype-templates/layouts/_base-layout.njk" %}
+
+{% block pageTitle %}Task list{% endblock %}
+
+{# Use an empty siteBrandingTitle block to only show the Scottish Government logo for site branding #}
+{% block siteBrandingTitle %}
+<div class="ds_site-branding__title">
+    {{ serviceName }}
+</div>
+{% endblock %}
+
+{# Use an empty siteSearch block to hide the search from the header #}
+{% block siteSearch %}{% endblock %}
+
+
+{# Back link - in place of breadcrumbs #}
+{% block breadcrumbs %}
+<div class="ds_wrapper">
+    <a class="ds_back-link" href="#">Back to 'Title of service'</a>
+</div>
+{% endblock %}
+
+{% block main %}
+<div class="ds_wrapper">
+    <main id="main-content" class="ds_layout  ds_layout--article">
+
+        {% block mainHeader %}
+        <div class="ds_layout__header">
+            <header class="ds_page-header">
+                <h1 class="ds_page-header__title">Title of service</h1>
+            </header>
+        </div>
+        {% endblock %}
+
+        {% block mainContent %}
+        <div class="ds_layout__content">
+            
+            <h2 id="task-list-status" class="ds_task-list-status-heading">Application incomplete</h2>
+            <nav aria-labelledby="task-list-status" class="ds_task-list-status">
+                <p>You have completed 4 of 7 sections.</p>
+                <p><a href="#task5" class="js-task-list-skip-link">Skip to first incomplete section</a></p>
+            </nav>
+            <ul class="ds_task-list-group">
+                <li class="ds_task-list-group__section">
+                    <h2 class="ds_task-list-heading">Heading for first set of tasks</h2>
+                    <ul class="ds_task-list">
+                        <li class="ds_task-list__task" id="task1">
+                            <div class="ds_task-list__task-details">
+                                <h3 class="ds_task-list__task-heading">
+                                    <a class="ds_task-list__task-link" href="#">Name of first task <span class="visually-hidden">(Completed)</span></a>
+                                </h3>
+                                <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
+                            </div>
+                            <div class="ds_task-list__task-status  ds_task-list__task-status--complete" aria-hidden="true">Completed</div>
+                        </li>
+                        <li class="ds_task-list__task" id="task2">
+                            <div class="ds_task-list__task-details">
+                                <h3 class="ds_task-list__task-heading">
+                                    <a class="ds_task-list__task-link" href="#">Name of second task <span class="visually-hidden">(Completed)</span></a>
+                                </h3>
+                                <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
+                            </div>
+                            <div class="ds_task-list__task-status  ds_task-list__task-status--complete" aria-hidden="true">Completed</div>
+                        </li>
+                        <li class="ds_task-list__task" id="task3">
+                            <div class="ds_task-list__task-details">
+                                <h3 class="ds_task-list__task-heading">
+                                    <a class="ds_task-list__task-link" href="#">Name of third task <span class="visually-hidden">(Completed)</span></a>
+                                </h3>
+                                <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
+                            </div>
+                            <div class="ds_task-list__task-status  ds_task-list__task-status--complete" aria-hidden="true">Completed</div>
+                        </li>
+                        <li class="ds_task-list__task" id="task4">
+                            <div class="ds_task-list__task-details">
+                                <h3 class="ds_task-list__task-heading">
+                                    <a class="ds_task-list__task-link" href="#">Name of fourth task <span class="visually-hidden">(Completed)</span></a>
+                                </h3>
+                                <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
+                            </div>
+                            <div class="ds_task-list__task-status  ds_task-list__task-status--complete" aria-hidden="true">Completed</div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="ds_task-list-group__section">
+                    <h2 class="ds_task-list-heading">Heading for second set of tasks</h2>
+                    <p class="ds_task-list-intro">Supportnig text for set of tasks.</p>
+                    <ul class="ds_task-list">
+                        <li class="ds_task-list__task" id="task5">
+                            <div class="ds_task-list__task-details">
+                                <h3 class="ds_task-list__task-heading">
+                                    <a class="ds_task-list__task-link" href="#">Name of fifth task  <span class="visually-hidden">(In progress)</span></a>
+                                </h3>
+                                <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
+                            </div>
+                            <div class="ds_task-list__task-status" aria-hidden="true">In progress</div>
+                        </li>
+                        <li class="ds_task-list__task" id="task6">
+                            <div class="ds_task-list__task-details">
+                                <h3 class="ds_task-list__task-heading">
+                                    <a class="ds_task-list__task-link" href="#">Name of sixth task  <span class="visually-hidden">(Cannot start yet)</span></a>
+                                </h3>
+                                <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
+                            </div>
+                            <div class="ds_task-list__task-status" aria-hidden="true">Cannot start yet</div>
+                        </li>
+                        <li class="ds_task-list__task" id="task7">
+                            <div class="ds_task-list__task-details">
+                                <h3 class="ds_task-list__task-heading">
+                                    <a class="ds_task-list__task-link" href="#">Name of seventh task <span class="visually-hidden">(Not started)</span></a>
+                                </h3>
+                                <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
+                            </div>
+                            <div class="ds_task-list__task-status" aria-hidden="true">Not started</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        {% endblock %}
+
+    </main>
+</div>
+{% endblock %}

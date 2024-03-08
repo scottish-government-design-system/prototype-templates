@@ -1,0 +1,138 @@
+{% extends "sg-prototype-templates/layouts/_base-layout.njk" %}
+
+
+{% block pageTitle %}Guide{% endblock %}
+
+{# Example of using a different logo in the header - in this case the Mygov.scot logo #}
+{% block siteBrandingLogo %}
+<a class="ds_site-branding__logo  ds_site-branding__link" href="/">
+    <img class="ds_site-branding__logo-image" src="{{ assetPathTemplates }}/images/site-furniture/logos/mygov.svg" alt="mygov.scot" />
+</a>
+{% endblock %}
+
+{# Use an empty siteBrandingTitle block to only show the logo for site branding #}
+{% block siteBrandingTitle %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="ds_wrapper">
+    <nav aria-label="Breadcrumb">
+        <ol class="ds_breadcrumbs">
+            <li class="ds_breadcrumbs__item">
+                <a class="ds_breadcrumbs__link" href="/">
+                    Home
+                </a>
+            </li>
+            <li class="ds_breadcrumbs__item">
+                <a class="ds_breadcrumbs__link" href="/">
+                    Sub level
+                </a>
+            </li>
+            <li class="ds_breadcrumbs__item" aria-current="page">
+                Current page
+            </li>
+        </ol>
+    </nav>
+</div>
+{% endblock %}
+
+{% block main %}
+<div class="ds_wrapper">
+    <main id="main-content" class="ds_layout  ds_layout--guide">
+
+        {% block mainHeader %}
+        <div class="ds_layout__header">
+            <header class="ds_page-header">
+                <span class="ds_page-header__label  ds_content-label">Guide title</span>
+                <h1 class="ds_page-header__title">Page 2 title</h1>
+                <dl class="ds_page-header__metadata  ds_metadata">
+                    <div class="ds_metadata__item">
+                        <dt class="ds_metadata__key">Last updated</dt>
+                        <dd class="ds_metadata__value">8 November 2016</dd>
+                    </div>
+                </dl>
+            </header>
+        </div>
+        {% endblock %}
+
+        {% block mainNavigation %}
+        <div class="ds_layout__navigation">
+            <nav role="navigation" class="ds_contents-nav" aria-label="Sections">
+                <h2 class="gamma">Contents</h2>
+                    <ul class="ds_contents-nav__list">
+                        <li class="ds_contents-nav__item">
+                            <a href="#" class="ds_contents-nav__link">
+                                Page 1 title
+                            </a>
+                        </li>
+                        <li class="ds_contents-nav__item">
+                                <span class="ds_contents-nav__link  ds_current">
+                                     Page 2 title
+                                </span>
+                        </li>
+                        <li class="ds_contents-nav__item">
+                            <a href="#" class="ds_contents-nav__link">
+                                Page 3 title
+                            </a>
+                        </li>
+                        <li class="ds_contents-nav__item">
+                            <a href="#" class="ds_contents-nav__link">
+                                Page 4 title
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        {% endblock %}
+
+        {% block mainContent %}
+        <div class="ds_layout__content">
+            <div class="ds_leader">
+                This is example leader text
+            </div>
+            <p>This is an example paragraph.</p>
+  
+            {% block sequentialNavigation %}
+            <nav class="ds_sequential-nav" aria-label="Article navigation">
+                <div class="ds_sequential-nav__item  ds_sequential-nav__item--prev">
+                    <a title="Previous section" href="#" class="ds_sequential-nav__button  ds_sequential-nav__button--left">
+                        <span class="ds_sequential-nav__text" data-label="previous">
+                        Page 1 title
+                        </span>
+                    </a>
+                </div>
+                <div class="ds_sequential-nav__item  ds_sequential-nav__item--next">
+                    <a title="Next section" href="#" class="ds_sequential-nav__button  ds_sequential-nav__button--right">
+                        <span class="ds_sequential-nav__text" data-label="next">
+                        Page 3 title
+                        </span>
+                    </a>
+                </div>
+            </nav>
+            {% endblock %}
+
+        </div>
+        {% endblock %}
+
+        {% block mainSidebar %}
+        <div class="ds_layout__sidebar">
+            <aside class="ds_article-aside">
+                <h2 class="gamma">Related content</h2>
+                <ul class="ds_no-bullets">
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        {% endblock %}
+
+    </main>
+</div>
+{% endblock %}

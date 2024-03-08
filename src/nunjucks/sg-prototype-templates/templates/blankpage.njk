@@ -1,0 +1,38 @@
+{% extends "sg-prototype-templates/layouts/_base-layout--navigation.njk" %}
+
+{# Specify the menu items object to show navigation #} 
+{% set navigationMenu = {
+        "menu": [
+            {
+            "label": "Menu item 1",
+            "link": "#",
+            "current": true
+            },
+            {
+            "label": "Menu item 2",
+            "link": "#"
+            },
+            {
+            "label": "Menu item 3",
+            "link": "#"
+            },
+            {
+            "label": "Menu item 4",
+            "link": "#"
+            }
+        ]
+    }
+%}
+
+{% block pageTitle %}Blank page{% endblock %}
+
+{# Use an empty siteBrandingTitle block to only show the logo for site branding #}
+{% block siteBrandingTitle %}
+<div class="ds_site-branding__title">
+    {{ serviceName }}
+</div>
+{% endblock %}
+
+{% block main %}
+
+{% endblock %}

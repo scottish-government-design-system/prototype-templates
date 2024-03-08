@@ -1,0 +1,13 @@
+{% macro siteNavigation(params) %}
+{%- if params.menu -%}
+<ul class="ds_site-navigation__list">
+    {% for menuItem in params.menu %}
+    <li class="ds_site-navigation__item">
+        <a href="{{ menuItem.link }}" class="ds_site-navigation__link  {%- if menuItem.current %}  ds_current{%- endif -%}">
+            {{ menuItem.label }}
+        </a>
+    </li>
+    {%- endfor %}
+</ul>
+{%- endif -%}
+{% endmacro %}

@@ -1,0 +1,122 @@
+{# !!!! The Check your answers page pattern is currently being reviewed and is subject to change !!!! #}
+
+{% extends "sg-prototype-templates/layouts/_base-layout.njk" %}
+
+{% block pageTitle %}Check your answers{% endblock %}
+
+{# Use an empty siteBrandingTitle block to only show the Scottish Government logo for site branding #}
+{% block siteBrandingTitle %}
+<div class="ds_site-branding__title">
+    {{ serviceName }}
+</div>
+{% endblock %}
+
+{# Use an empty siteSearch block to hide the search from the header #}
+{% block siteSearch %}{% endblock %}
+
+
+{# Back link - in place of breadcrumbs #}
+{% block breadcrumbs %}
+<div class="ds_wrapper">
+    <a class="ds_back-link" href="#">Back to 'Title of service'</a>
+</div>
+{% endblock %}
+
+{% block main %}
+<div class="ds_wrapper">
+    <main id="main-content" class="ds_layout  ds_layout--article">
+
+        {% block mainHeader %}
+        <div class="ds_layout__header">
+            <header class="ds_page-header">
+                <h1 class="ds_page-header__title">Check your answers before sending your application</h1>
+            </header>
+        </div>
+        {% endblock %}
+
+        {% block mainContent %}
+        <div class="ds_layout__content">
+            
+            <h2>Heading for first group of answers</h2>
+            <ul class="ds_summary-list">
+                <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is an example question?</span> <span class="ds_summary-list__value" id="q1"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
+                    <div class="ds_summary-list__actions">
+                        <ul class="ds_summary-list__actions-list">
+                            <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q1">Change <span class="visually-hidden">your answer for: <q>This is an example question?</q></span></button></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is another different example question?</span> <span class="ds_summary-list__value" id="q2"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
+                    <div class="ds_summary-list__actions">
+                        <ul class="ds_summary-list__actions-list">
+                            <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q2">Change <span class="visually-hidden">your answer for: <q>This is another different example question?</q></span></button></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <h2>Heading for second group of answers</h2>
+            <h3>Subheading for group of summary cards</h3>
+            <div class="ds_summary-card">
+                <div class="ds_summary-card__header">
+                    <h3 class="ds_summary-card__header-title">Joe Bloggs</h3>
+                    <ul class="ds_summary-card__actions-list">
+                        <li class="ds_summary-card__actions-list-item"><button class="ds_link"> Change <span class="visually-hidden">your answers for: <q>Joe Bloggs</q></span> </button></li>
+                    </ul>
+                </div>
+                <div class="ds_summary-card__content">
+                    <ul class="ds_summary-list">
+                        <li class="ds_summary-list__item"><span class="ds_summary-list__key">Phone number</span> <span class="ds_summary-list__value"> <span class="visually-hidden">Your answer is:</span> <q class="ds_summary-list__answer">01234 567 890</q> </span></li>
+                        <li class="ds_summary-list__item"><span class="ds_summary-list__key">Address</span> <span class="ds_summary-list__value"> <span class="visually-hidden">Your answer is:</span> <q class="ds_summary-list__answer">Victoria Quay<br>
+                            Edinburgh<br>
+                            EH6 6QQ</q></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ds_summary-card">
+                <div class="ds_summary-card__header">
+                    <h3 class="ds_summary-card__header-title">Mary Smith</h3>
+                    <ul class="ds_summary-card__actions-list">
+                        <li class="ds_summary-card__actions-list-item"><button class="ds_link"> Change <span class="visually-hidden">your answers for: <q>Mary Smith</q></span> </button></li>
+                    </ul>
+                </div>
+                <div class="ds_summary-card__content">
+                    <ul class="ds_summary-list">
+                        <li class="ds_summary-list__item"><span class="ds_summary-list__key">Phone number</span> <span class="ds_summary-list__value"> <span class="visually-hidden">Your answer is:</span> <q class="ds_summary-list__answer">01234 098 765</q> </span></li>
+                        <li class="ds_summary-list__item"><span class="ds_summary-list__key">Address</span> <span class="ds_summary-list__value"> <span class="visually-hidden">Your answer is:</span> <q class="ds_summary-list__answer">St. Andrew's House<br>
+                            Regent Road<br>
+                            Edinburgh<br>
+                            EH1 3DG</q></span></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Another subheading</h3>
+            <ul class="ds_summary-list">
+                <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is an example question?</span> <span class="ds_summary-list__value" id="q3"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer"><ul class="ds_no-bullets"><li>Answer part one</li><li>Answer part two</li></ul></q></span>
+                    <div class="ds_summary-list__actions">
+                        <ul class="ds_summary-list__actions-list">
+                            <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q3">Change <span class="visually-hidden">your answer for: <q>This is an example question?</q></span></button></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is another different example question?</span> <span class="ds_summary-list__value" id="q4"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
+                    <div class="ds_summary-list__actions">
+                        <ul class="ds_summary-list__actions-list">
+                            <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q4">Change <span class="visually-hidden">your answer for: <q>This is another different example question?</q></span></button></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a href="/path/of/next/page" class="ds_button">
+                    Submit application
+                </a>
+            </div>
+
+        </div>
+        {% endblock %}
+
+    </main>
+</div>
+{% endblock %}
