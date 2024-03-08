@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "description": "Scottish Government Design System templates for the GOV.UK Prototype Kit"
+  },
+  "assets": [
+    "/src/images/"
+  ],
+  "scripts": [
+    {
+    "path": "/src/scripts/designsystem-templates.js",
+    "type": "module"
+    }
+  ],
+  "nunjucksPaths": [
+    "/"
+  ],
+  "templates": [
+    {
+      "path": "/src/templates/article.njk",
+      "name": "Article page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/templates/blankpage.njk",
+      "name": "Blank page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/templates/check-answers.njk",
+      "name": "Check your answers page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/templates/form-submission-results.njk",
+      "name": "Form submission results page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/templates/guide.njk",
+      "name": "Guide page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/templates/question.njk",
+      "name": "Question page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/templates/task-list.njk",
+      "name": "Task list page",
+      "type": "nunjucks"
+    }
+  ],
+  "pluginDependencies": [
+	  {
+	    "packageName": "@scottish-government/design-system"
+    }
+	]
+}

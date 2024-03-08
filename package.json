@@ -1,0 +1,11 @@
+{
+  "name": "@scottish-government-design-system/prototype-templates",
+  "description": "Construct prototypes using the Scottish Government Design System.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Scottish Government Digital Design system team",
+    "email": "designsystem@gov.scot",
+    "url": "https://github.com/scottish-government-design-system/design-system"
+  },
+  "license": "MIT"
+}
