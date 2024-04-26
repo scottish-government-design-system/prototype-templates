@@ -6,7 +6,7 @@ Changes are grouped under the labels: `Added`, `Changed`, `Deprecated`,
 `Removed`, `Fixed`, and `Security`.
 
 ---
-## Unreleased
+## 0.1.0
 ### Added
 - initial setup as plugin for the GOV.UK Prototype Kit with a dependency on the Scottish Government Design System
 - layouts for a standard page structure with and without site navigation
