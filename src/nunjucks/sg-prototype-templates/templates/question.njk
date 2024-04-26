@@ -1,0 +1,106 @@
+{# !!!! The Question pattern is currently being reviewed and is subject to change !!!! #}
+
+{% extends "sg-prototype-templates/layouts/_base-layout.njk" %}
+
+{% block pageTitle %}Question{% endblock %}
+
+{# Example of using a different logo in the header - in this case the Mygov.scot logo #}
+{% block siteBrandingLogo %}
+<a class="ds_site-branding__logo  ds_site-branding__link" href="/">
+    <img class="ds_site-branding__logo-image" src="{{ assetPathTemplates }}/images/site-furniture/logos/mygov.svg" alt="mygov.scot" />
+</a>
+{% endblock %}
+
+{# Use an empty siteBrandingTitle block to only show the logo for site branding #}
+{% block siteBrandingTitle %}
+{% endblock %}
+
+{# Use an empty siteSearch block to hide the search from the header #}
+{% block siteSearch %}{% endblock %}
+
+{# 'Part of' notification message - in place of breadcrumbs #}
+{% block breadcrumbs %}
+<div class="ds_wrapper">
+    <nav class="ds_notification-message">
+        <h3 class="ds_notification-message__title">
+            Part of
+        </h3>
+        <div class="ds_notification-message__body">
+            <p><a href="/path/of/start/page">Title of application form</a></p>
+        </div>
+    </nav>
+</div>
+{% endblock %}
+
+{% block main %}
+<div class="ds_wrapper">
+    <main id="main-content" class="ds_layout  ds_layout--article">
+
+        {% block mainContent %}
+        <div class="ds_layout__content">
+            
+            {# Set the action attribute to the next page in your form's journey #}
+            <form action="/path/of/next/page" method="post">
+                <div class="ds_question">
+                    <fieldset>
+                        <legend class="ds_page-header">
+                            <h1 class="ds_page-header__title">
+                                This is a question
+                            </h1>
+                        </legend>
+
+                        {# Example of a form input - in this case a date input with datepicker #}
+                        <div data-module="ds-datepicker" class="ds_datepicker">
+                            <label class="ds_label" for="chosen-date">Date</label>
+                            <p class="ds_hint-text">Use dd/mm/yyyy format. For example, 31/01/2023.</p>
+                            <div class="ds_input__wrapper">
+                                <input id="chosen-date" name="chosen-date" type="text" class="ds_input  ds_input--fixed-10">
+                            </div>
+                        </div>
+                        
+                    </fieldset>
+                </div>
+                <div class="button-group">
+                    <a href="/path/of/prev/page" class="ds_button  ds_button--cancel  ds_button--has-icon  ds_button--has-icon--left">
+                        <svg class="ds_icon" aria-hidden="true" role="img"><use href="{{ assetPath }}/images/icons/icons.stack.svg#chevron_left"></use></svg>
+                        Back
+                    </a>
+                    <button class="ds_button  ds_button--has-icon">
+                        Next
+                        <svg class="ds_icon" aria-hidden="true" role="img"><use href="{{ assetPath }}/images/icons/icons.stack.svg#chevron_right"></use></svg>
+                    </button>
+                </div>
+            </form>
+
+            {# Optionally show submitted answers so far #}
+            {% block answerSummary %}
+            <div>
+                <h2>Your answers</h2>
+                <p><button class="ds_link">Clear answers and start again</button></p>
+                <ol class="ds_summary-list">
+                    <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is an example question?</span> <span class="ds_summary-list__value" id="q1"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
+                        <div class="ds_summary-list__actions">
+                            <ul class="ds_summary-list__actions-list">
+                                <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q1">Change <span class="visually-hidden">your answer for: <q>This is an example question?</q></span></button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is another different example question?</span> <span class="ds_summary-list__value" id="q2"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
+                        <div class="ds_summary-list__actions">
+                            <ul class="ds_summary-list__actions-list">
+                                <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q2">Change <span class="visually-hidden">your answer for: <q>This is another different example question?</q></span></button></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            {% endblock %}
+
+
+        </div>
+        {% endblock %}
+
+        
+    </main>
+</div>
+{% endblock %}

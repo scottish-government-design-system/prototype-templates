@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "description": "Scottish Government Design System templates for the GOV.UK Prototype Kit"
+  },
+  "assets": [
+    "/src/images/"
+  ],
+  "scripts": [
+    {
+    "path": "/src/scripts/designsystem-templates.js",
+    "type": "module"
+    }
+  ],
+  "nunjucksPaths": [
+    "/src/nunjucks/"
+  ],
+  "templates": [
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/article.njk",
+      "name": "Article page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/blankpage.njk",
+      "name": "Blank page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/check-answers.njk",
+      "name": "Check your answers page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/form-submission-results.njk",
+      "name": "Form submission results page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/guide.njk",
+      "name": "Guide page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/question.njk",
+      "name": "Question page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/task-list.njk",
+      "name": "Task list page",
+      "type": "nunjucks"
+    }
+  ],
+  "pluginDependencies": [
+	  {
+	    "packageName": "@scottish-government/design-system",
+      "minVersion": "2.0.0"
+    }
+	]
+}

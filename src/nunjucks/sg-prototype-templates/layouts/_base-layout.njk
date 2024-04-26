@@ -1,0 +1,162 @@
+{% set assetPath = "/plugin-assets/%40scottish-government%2Fdesign-system/dist" %}
+{% set assetPathTemplates = "/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src" %}
+
+<!doctype html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>{% block pageTitle %}{{ serviceName }}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block stylesheets %}
+			<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,400italic&amp;display=swap" rel="stylesheet" type="text/css">
+			<link href="/public/stylesheets/application.css" rel="stylesheet" type="text/css" />
+			{% for stylesheetUrl in pluginConfig.stylesheets %}
+				<link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+			{% endfor %}
+		{% endblock %}
+        {% block headIcons %}
+        <link rel="shortcut icon" href='{{ assetPathTemplates }}/images/site-furniture/icons/favicon.ico' type="image/x-icon"/>
+        <link rel="apple-touch-icon" sizes="180x180" href='{{ assetPathTemplates }}/images/site-furniture/icons/apple-touch-icon.png'>
+        <link rel="icon" type="image/png" sizes="32x32" href='{{ assetPathTemplates }}/images/site-furniture/icons/favicon-32x32.png'>
+        <link rel="icon" type="image/png" sizes="16x16" href='{{ assetPathTemplates }}/images/site-furniture/icons/favicon-16x16.png'>
+        <link rel="mask-icon" href='{{ assetPathTemplates }}/images/site-furniture/icons/safari-pinned-tab.svg' color="#0065bd">
+        <meta name="msapplication-TileColor" content="#0065bd">
+        <meta name="theme-color" content="#ffffff">
+		{% endblock %}
+    </head>
+    <body>
+        <div class="ds_skip-links">
+            <ul class="ds_skip-links__list">
+                <li class="ds_skip-links__item">
+                    <a class="ds_skip-links__link" href="#main-content">Skip to main content</a>
+                </li>
+            </ul>
+        </div>
+        <span id="page-top"></span>
+        <div class="ds_page">
+            <div class="ds_page__top">
+                {% block siteHeader %}
+                <header class="ds_site-header  ds_site-header--gradient" role="banner">
+                    <div class="ds_wrapper">
+                        <div class="ds_site-header__content">
+                            <div class="ds_site-branding">
+                                {% block siteBrandingLogo %}
+                                <a class="ds_site-branding__logo  ds_site-branding__link" href="/">
+                                    <img class="ds_site-branding__logo-image" src="{{ assetPathTemplates }}/images/site-furniture/logos/scottish-government.svg" alt="Scottish Government" />
+                                </a>
+                                {% endblock %}
+                                {% block siteBrandingTitle %}
+                                <div class="ds_site-branding__title">
+                                    {{ serviceName }}
+                                </div>
+                                {% endblock %}
+                            </div>
+                        
+                            {% block siteHeaderControls %}
+                            {% endblock %}
+
+                            {% block siteNavigationMobile %}
+                            {% endblock %}
+
+                            {% block siteSearch %}
+                            <div class="ds_site-search  ds_site-header__search" data-module="ds-site-search">
+                                <form role="search" class="ds_site-search__form">
+                                    <label class="ds_label  visually-hidden" for="site-search">Search</label>
+                                    <div class="ds_input__wrapper  ds_input__wrapper--has-icon">
+                                        <input name="q" required="" id="site-search" class="ds_input  ds_site-search__input" type="text" placeholder="Search" autocomplete="off">
+                                        <button type="submit" class="ds_button  js-site-search-button">
+                                            <span class="visually-hidden">Search</span>
+                                            <svg class="ds_icon" aria-hidden="true" role="img"><use href="{{ assetPath }}/images/icons/icons.stack.svg#search"></use></svg>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            {% endblock %}
+                        </div>
+                    </div>
+                    
+                    {% block siteNavigation %}
+                    {% endblock %}
+                </header>
+                {% endblock %}
+            </div>
+            <div class="ds_page__middle">
+                {% block breadcrumbs %}
+                {% endblock %}
+                {% block main %}
+                {% endblock %}
+            </div>
+            {% block backToTop %}
+            <div class="ds_back-to-top" data-module="ds-back-to-top">
+                <a href="#page-top" class="ds_back-to-top__button">Back to top
+                    <svg class="ds_icon  ds_back-to-top__icon" aria-hidden="true" role="img">
+                        <use href="{{ assetPath }}/images/icons/icons.stack.svg#arrow_upward"></use>
+                    </svg>
+                </a>
+            </div>
+            {% endblock %}
+            {% block siteFooter %}
+            <div class="ds_page__bottom">
+                <footer class="ds_site-footer">
+                    <div class="ds_wrapper">
+                        <div class="ds_site-footer__content">
+                            <ul class="ds_site-footer__site-items">
+                                {% if (GOVUKPrototypeKit.isDevelopment) %}
+                                    <li class="ds_site-items__item">
+                                        <a href="/manage-prototype">Manage your prototype</a>
+                                    </li>
+                                {% endif %}
+                                <li class="ds_site-items__item">
+                                    <a href="/manage-prototype/clear-data">Clear data</a>
+                                </li>
+                            </ul>
+                            <div class="ds_site-footer__copyright">
+                                <a
+                                    class="ds_site-footer__copyright-logo"
+                                    href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
+                                    <img
+                                        loading="lazy"
+                                        width="300"
+                                        height="121"
+                                        src="{{ assetPathTemplates }}/images/site-furniture/logos/ogl.svg"
+                                        alt="Open Government License"/>
+                                </a>
+                                <p>All content is available under the
+                                    <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>, except for graphic assets and where otherwise stated</p>
+                                <p>&copy; Crown Copyright</p>
+                            </div>
+                            <div class="ds_site-footer__org">
+                                <a class="ds_site-footer__org-link" title="The Scottish Government" href="https://www.gov.scot/">
+                                    <img
+                                        loading="lazy"
+                                        width="300"
+                                        height="57"
+                                        class="ds_site-footer__org-logo"
+                                        src="{{ assetPathTemplates }}/images/site-furniture/logos/scottish-government--min.svg"
+                                        alt="gov.scot"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            {% endblock %}
+        </div>
+        {% block bodyEnd %}
+            {% for scriptConfig in pluginConfig.scripts %}
+            {% if scriptConfig.src === '/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src/scripts/designsystem-templates.js' %}
+                {# Skip script from this plugin as it will be included at the end #}
+            {% else %}
+                {% if scriptConfig.type|length %}
+                    <script type="{{scriptConfig.type}}" src="{{scriptConfig.src}}"></script>
+                {% else %}
+                    <script src="{{scriptConfig.src}}"></script>
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+            
+            {# Load script from this plugin last which initialises window.DS #}
+            <script src="{{ assetPathTemplates }}/scripts/designsystem-templates.js"></script>
+        {% endblock %}
+    </body>
+</html>

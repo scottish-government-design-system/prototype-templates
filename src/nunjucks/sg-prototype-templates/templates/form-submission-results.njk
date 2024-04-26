@@ -1,0 +1,41 @@
+{# !!!! The Form submission results page pattern is currently being reviewed and is subject to change !!!! #}
+
+{% extends "sg-prototype-templates/layouts/_base-layout.njk" %}
+
+{% block pageTitle %}Form submission results{% endblock %}
+
+{# Use an empty siteBrandingTitle block to only show the Scottish Government logo for site branding #}
+{% block siteBrandingTitle %}
+<div class="ds_site-branding__title">
+    {{ serviceName }}
+</div>
+{% endblock %}
+
+{# Use an empty siteSearch block to hide the search from the header #}
+{% block siteSearch %}{% endblock %}
+
+{% block main %}
+<div class="ds_wrapper">
+    <main id="main-content" class="ds_layout  ds_layout--article">
+        
+        {% block mainHeader %}
+        <div class="ds_layout__header">
+            <header class="ds_page-header">
+                <div class="ds_notification-panel ds_notification-panel--success">
+                <h1 class="ds_notification-panel__title">Success message</h1>
+                <div class="ds_notification-panel__content"><p>Additional important information relating to the success message.</p></div>
+            </div>
+            </header>
+        </div>
+        {% endblock %}
+
+        {% block mainContent %}
+        <div class="ds_layout__content">
+            
+            <p>Further information about what the user should expect next.</p>
+
+        </div>
+        {% endblock %}
+    </main>
+</div>
+{% endblock %}
