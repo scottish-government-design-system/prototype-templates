@@ -7,5 +7,6 @@
     "email": "designsystem@gov.scot",
     "url": "https://github.com/scottish-government-design-system/design-system"
   },
+  "repository": "github:scottish-government-design-system/prototype-templates",
   "license": "MIT"
 }
