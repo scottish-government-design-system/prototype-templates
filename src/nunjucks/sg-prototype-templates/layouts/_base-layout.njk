@@ -24,7 +24,7 @@
         <meta name="theme-color" content="#ffffff">
 		{% endblock %}
     </head>
-    <body>
+    <body{%- if bodyClasses %} class="{{ bodyClasses }}"{% endif %}>
         <div class="ds_skip-links">
             <ul class="ds_skip-links__list">
                 <li class="ds_skip-links__item">
