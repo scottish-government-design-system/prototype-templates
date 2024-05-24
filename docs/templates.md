@@ -4,7 +4,7 @@ This plugin contains a set of templates to use in your prototype to create a var
 
 With your prototype running and this plugin installed, the templates will be available in the 'Manage your prototype' admin area. Here you can 'view' how each template looks with their default placeholder content, or you can 'create' a new page using a template and then make changes to this page in your prototype.
 
-## List of templates
+## List of available templates
 
 The following templates are included:
 
@@ -129,7 +129,7 @@ The Scottish Government Design System prototype templates included in this plugi
 1. Make a copy of the layout file at `app/views/layouts/main.html` and give it a name that describes it's purpose
 2. Change the `extends` line to use one of the Scottish Government layouts, for example: {% extends "sg-prototype-templates/layouts/_base-layout.njk" %}
 
-### Using blocks
+## Blocks
 
 Blocks are how layouts and pages share code. For example, there is a block called `siteHeader` for the header content on every page that uses the 'Site header' component from the Scottish Government Design System. Blocks are typically named after their equivalent design system component using camel case syntax.
 
@@ -161,9 +161,9 @@ The following example shows how the breadcrumbs component is used within the bre
 {% endblock %}
 ```
 
-#### List of initial blocks
+### List of available blocks
 
-The following blocks are used by the plugin's templates. You can override these in your app's pages or define new blocks to use in any new layouts that you create.
+The following blocks are used by the plugin's templates. You can override these in your prototype app's pages or define new blocks to use in any new layouts that you create.
 
 <dl>
     <dt><code>pageTitle</code></dt>
@@ -196,4 +196,19 @@ The following blocks are used by the plugin's templates. You can override these 
     <dd>area to place the 'Site footer' component, with the default including links to 'Manage your prototype' and 'Clear data'. </dd>
     <dt><code>bodyEnd</code></dt>
     <dd>area to place elements immediately before the closing <code>body</code> tag, with the default including any user specified JavaScript followed by those from installed plugins. The script from this plugin is included last and it initialises the Scottish Government Design System script which is included as a dependency.</dd>
+</dl>
+
+## Variables
+Variables are used to share content between layouts and pages. These let you override the default values of content in your pages from a single place.
+
+### List of available variables
+The following variables are used by the plugin's templates to provide customisation.
+
+<dl>
+    <dt><code>serviceName</code></dt>
+    <dd>sets the name of your prototype which is shown in the 'Manage your prototype' admin area's header as well as in the header of your prototype app's pages. This is set in the <code>config.json</code> file of your prototype, for example <code>"serviceName": "Test service"</code>.</dd>
+    <dt><code>navigationMenu</code></dt>
+    <dd>defines the menu structure that is used by the <code>_base-layout--navigation.njk</code> layout. This can be set in your prototypes pages or layouts which extend this layout.</dd>
+    <dt><code>bodyClasses</code></dt>
+    <dd>adds optional classes to the <code>&lt;body&gt;</code> tag. This can be set in your prototype pages or any additional layouts you create. For example, adding <code>{% set bodyClasses = "custom-class" %}</code> to the top of a page will change the <code>&lt;body&gt;</code> tag to <code>&lt;body class="custom-class"&gt;</code>.</dd>
 </dl>
