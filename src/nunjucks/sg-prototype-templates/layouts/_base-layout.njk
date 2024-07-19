@@ -25,6 +25,7 @@
 		{% endblock %}
     </head>
     <body{%- if bodyClasses %} class="{{ bodyClasses }}"{% endif %}>
+        {% block bodyStart %}{% endblock %}
         <div class="ds_skip-links">
             <ul class="ds_skip-links__list">
                 <li class="ds_skip-links__item">
@@ -35,6 +36,7 @@
         <span id="page-top"></span>
         <div class="ds_page">
             <div class="ds_page__top">
+                {% block pageTopStart %}{% endblock %}
                 {% block siteHeader %}
                 <header class="ds_site-header  ds_site-header--gradient" role="banner">
                     <div class="ds_wrapper">
