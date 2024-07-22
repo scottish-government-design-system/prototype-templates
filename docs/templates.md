@@ -172,6 +172,10 @@ The following blocks are used by the plugin's templates. You can override these 
     <dd>area to specify what stylesheets to include, with the default list loading the Roboto webfont, followed by any user defined stylesheets and then those imported from installed plugins.</dd>
     <dt><code>headIcons</code></dt>
     <dd>list of favicon types for various browsers, with the default icon as the Scottish Government saltire.</dd>
+    <dt><code>bodyStart</code></dt>
+    <dd>area to place elements immediately after the opening <code>&lt;body&gt;</code> tag.</dd>
+    <dt><code>pageTopStart</code></dt>
+    <dd>area to place elements at the start of the <code>ds_page__top</code> area of the page, immediately before the <code>siteHeader</code> block.</dd>
     <dt><code>siteHeader</code></dt>
     <dd>area to place the 'Site header' pattern, with the default containing a number of additional blocks for customisation.</dd>
     <dt><code>siteBrandingLogo</code></dt>
