@@ -23,6 +23,7 @@
         <meta name="msapplication-TileColor" content="#0065bd">
         <meta name="theme-color" content="#ffffff">
 		{% endblock %}
+        <script src="{{ assetPathTemplates }}/scripts/js-enabled.js"></script>
     </head>
     <body{%- if bodyClasses %} class="{{ bodyClasses }}"{% endif %}>
         <div class="ds_skip-links">
@@ -143,18 +144,18 @@
             {% endblock %}
         </div>
         {% block bodyEnd %}
-            {% for scriptConfig in pluginConfig.scripts %}
-            {% if scriptConfig.src === '/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src/scripts/designsystem-templates.js' %}
-                {# Skip script from this plugin as it will be included at the end #}
-            {% else %}
-                {% if scriptConfig.type|length %}
+            {%- for scriptConfig in pluginConfig.scripts %}
+            {%- if (scriptConfig.src === '/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src/scripts/designsystem-templates.js')
+               or (scriptConfig.src === '/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src/scripts/js-enabled.js') -%}
+                {# Skip scripts from this plugin as it will be included at the end #}
+            {%- else -%}
+                {%- if scriptConfig.type|length -%}
                     <script type="{{scriptConfig.type}}" src="{{scriptConfig.src}}"></script>
-                {% else %}
+                {%- else -%}
                     <script src="{{scriptConfig.src}}"></script>
-                {% endif %}
-            {% endif %}
-            {% endfor %}
-            
+                {% endif -%}
+            {%- endif -%}
+            {%- endfor -%} 
             {# Load script from this plugin last which initialises window.DS #}
             <script src="{{ assetPathTemplates }}/scripts/designsystem-templates.js"></script>
         {% endblock %}

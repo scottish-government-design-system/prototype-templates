@@ -9,6 +9,10 @@
     {
     "path": "/src/scripts/designsystem-templates.js",
     "type": "module"
+    },
+    {
+    "path": "/src/scripts/js-enabled.js",
+    "type": "module"
     }
   ],
   "nunjucksPaths": [
