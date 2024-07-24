@@ -6,6 +6,14 @@ Changes are grouped under the labels: `Added`, `Changed`, `Deprecated`,
 `Removed`, `Fixed`, and `Security`.
 
 ---
+## 0.3.0
+### Added
+- Nunjucks blocks at the start of the body and page-top areas of the base layout
+- js-enabled script to add the named class to the html tag when JavaScript is enabled
+### Changed
+- updated to use v2.2.0 of the Scottish Government Design System
+- question page template to match changes in the Scottish Government Design System
+
 ## 0.2.0
 ### Added
 - 'bodyClasses' variable can be used to add classes to the 'body' tag

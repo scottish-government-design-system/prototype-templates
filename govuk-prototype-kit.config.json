@@ -58,7 +58,7 @@
   "pluginDependencies": [
 	  {
 	    "packageName": "@scottish-government/design-system",
-      "minVersion": "2.1.0"
+      "minVersion": "2.2.0"
     }
 	]
 }
