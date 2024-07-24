@@ -34,7 +34,7 @@
 
 {% block main %}
 <div class="ds_wrapper">
-    <main id="main-content" class="ds_layout  ds_layout--article">
+    <main id="main-content" class="ds_layout  ds_layout--question-page">
 
         {% block mainContent %}
         <div class="ds_layout__content">
@@ -72,31 +72,35 @@
                 </div>
             </form>
 
-            {# Optionally show submitted answers so far #}
-            {% block answerSummary %}
-            <div>
+            
+
+
+        </div>
+        {% endblock %}
+
+        {# Optionally show submitted answers so far #}
+        {% block answerSummary %}
+        <div class="ds_layout__footer">
+            <div class="ds_!_margin-top--4">
                 <h2>Your answers</h2>
                 <p><button class="ds_link">Clear answers and start again</button></p>
                 <ol class="ds_summary-list">
-                    <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is an example question?</span> <span class="ds_summary-list__value" id="q1"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
+                    <li class="ds_summary-list__item"><span class="ds_summary-list__key" id="item-1-key">This is an example question?</span> <span class="ds_summary-list__value"><q class="ds_summary-list__answer">My answer</q></span>
                         <div class="ds_summary-list__actions">
                             <ul class="ds_summary-list__actions-list">
-                                <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q1">Change <span class="visually-hidden">your answer for: <q>This is an example question?</q></span></button></li>
+                                <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="item-1-key">Change</button></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is another different example question?</span> <span class="ds_summary-list__value" id="q2"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
+                    <li class="ds_summary-list__item"><span class="ds_summary-list__key" id="item-2-key">This is another different example question?</span> <span class="ds_summary-list__value"><q class="ds_summary-list__answer">My answer</q></span>
                         <div class="ds_summary-list__actions">
                             <ul class="ds_summary-list__actions-list">
-                                <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q2">Change <span class="visually-hidden">your answer for: <q>This is another different example question?</q></span></button></li>
+                                <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="item-2-key">Change</button></li>
                             </ul>
                         </div>
                     </li>
                 </ol>
             </div>
-            {% endblock %}
-
-
         </div>
         {% endblock %}
 
