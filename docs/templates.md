@@ -22,6 +22,9 @@ The following templates are included:
   - contents menu to link to other pages in the guide
   - main content area with page header and sidebar
   - sequential navigation to link pages in a guide
+- `navigation-card.njk` navigation page with a set of linked cards
+- `navigation-grid.njk` navigation page with a grid of links
+- `navigation-list.njk` navigation page with a list of links
 - `question.njk` example of a page in a form with a date picker, use this to construct linked form pages using the various types of form input components in the design system
 - `task-list.njk` use to show a user their progress in a large form
 

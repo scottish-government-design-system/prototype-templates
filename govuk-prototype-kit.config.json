@@ -45,6 +45,21 @@
       "type": "nunjucks"
     },
     {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/navigation--card.njk",
+      "name": "Navigation (Card) page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/navigation--grid.njk",
+      "name": "Navigation (Grid) page",
+      "type": "nunjucks"
+    },
+    {
+      "path": "/src/nunjucks/sg-prototype-templates/templates/navigation--list.njk",
+      "name": "Navigation (List) page",
+      "type": "nunjucks"
+    },
+    {
       "path": "/src/nunjucks/sg-prototype-templates/templates/question.njk",
       "name": "Question page",
       "type": "nunjucks"

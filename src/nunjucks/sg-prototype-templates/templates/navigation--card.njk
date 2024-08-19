@@ -1,0 +1,115 @@
+{% extends "sg-prototype-templates/layouts/_base-layout.njk" %}
+
+
+{% block pageTitle %}Navigation - Card{% endblock %}
+
+{# Example of using a different logo in the header - in this case the Mygov.scot logo #}
+{% block siteBrandingLogo %}
+<a class="ds_site-branding__logo  ds_site-branding__link" href="/">
+    <img class="ds_site-branding__logo-image" src="{{ assetPathTemplates }}/images/site-furniture/logos/mygov.svg" alt="mygov.scot" />
+</a>
+{% endblock %}
+
+{# Use an empty siteBrandingTitle block to only show the logo for site branding #}
+{% block siteBrandingTitle %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<div class="ds_wrapper">
+    <nav aria-label="Breadcrumb">
+        <ol class="ds_breadcrumbs">
+            <li class="ds_breadcrumbs__item">
+                <a class="ds_breadcrumbs__link" href="/">
+                    Home
+                </a>
+            </li>
+            <li class="ds_breadcrumbs__item">
+                <a class="ds_breadcrumbs__link" href="/">
+                    Sub level
+                </a>
+            </li>
+            <li class="ds_breadcrumbs__item" aria-current="page">
+                Current page
+            </li>
+        </ol>
+    </nav>
+</div>
+{% endblock %}
+
+{% block main %}
+<main id="main-content">
+
+    <div class="category-upper">
+
+
+        <div class="ds_wrapper">
+            <header class="ds_feature-header  ds_feature-header--wide">
+                <div class="ds_feature-header__primary">
+                    <h1 class="ds_feature-header__title">Page title</h1>
+                    <p>A short summary pagagraph.</p>
+                </div>
+
+            </header>
+        </div>
+    </div>
+
+    <div class="category-lower  ds_pre-footer-background">
+        <div class="ds_wrapper">
+
+            <div class="ds_layout  ds_layout--category-list">
+                <div class="ds_layout__grid">
+
+                    <div class="ds_category-list-container">
+                    <nav aria-label="Category navigation">
+                        <ul class="ds_category-list ds_category-list--grid ds_category-list--narrow">
+                            <li class="ds_card  ds_card--hover">
+                                <div class="ds_card__content">
+                                    <h2 class="ds_card__title">
+                                        <a class="ds_card__link--cover" href="#">Environment and countryside</a>
+                                    </h2>
+                                    <p>Access to and protection of the countryside and managing wildlife on your land</p>
+                                </div>
+                            </li>
+                            <li class="ds_card  ds_card--hover">
+                                <div class="ds_card__content">
+                                    <h2 class="ds_card__title">
+                                        <a class="ds_card__link--cover" href="#">Environmental Impact Assessment (EIA)</a>
+                                    </h2>
+                                    <p>Find out about Environmental Impact Assessments (EIAs) in your area</p>
+                                </div>
+                            </li>
+                            <li class="ds_card  ds_card--hover">
+                                <div class="ds_card__content">
+                                    <h2 class="ds_card__title">
+                                        <a class="ds_card__link--cover" href="#">Farming and rural issues</a>
+                                    </h2>
+                                    <p>Guidance for farming, animal health, agriculture and food businesses in Scotland</p>
+                                </div>
+                            </li>
+                            <li class="ds_card  ds_card--hover">
+                                <div class="ds_card__content">
+                                    <h2 class="ds_card__title">
+                                        <a class="ds_card__link--cover" href="#">Waste and energy</a>
+                                    </h2>
+                                    <p>Find advice and support to help your business become more environmentally aware and efficient</p>
+                                </div>
+                            </li>
+                            <li class="ds_card  ds_card--hover">
+                                <div class="ds_card__content">
+                                    <h2 class="ds_card__title">
+                                        <a class="ds_card__link--cover" href="#">Marine and fisheries</a>
+                                    </h2>
+                                    <p>Includes information on safety at sea and managing crew</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+{% endblock %}
