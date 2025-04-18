@@ -4,26 +4,12 @@
 
 {% block pageTitle %}Task list{% endblock %}
 
-{# Use an empty siteBrandingTitle block to only show the Scottish Government logo for site branding #}
-{% block siteBrandingTitle %}
-<div class="ds_site-branding__title">
-    {{ serviceName }}
-</div>
-{% endblock %}
-
 {# Use an empty siteSearch block to hide the search from the header #}
 {% block siteSearch %}{% endblock %}
 
-
-{# Back link - in place of breadcrumbs #}
-{% block breadcrumbs %}
-<div class="ds_wrapper">
-    <a class="ds_back-link" href="#">Back to 'Title of service'</a>
-</div>
-{% endblock %}
-
 {% block main %}
 <div class="ds_wrapper">
+    <a class="ds_back-link" href="#">Back to 'Name of service'</a>
     <main id="main-content" class="ds_layout  ds_layout--article">
 
         {% block mainHeader %}
@@ -53,7 +39,7 @@
                                 </h3>
                                 <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
                             </div>
-                            <div class="ds_task-list__task-status  ds_task-list__task-status--complete" aria-hidden="true">Completed</div>
+                            <strong class="ds_tag  ds_tag--green" aria-hidden="true">Completed</strong>
                         </li>
                         <li class="ds_task-list__task" id="task2">
                             <div class="ds_task-list__task-details">
@@ -62,7 +48,7 @@
                                 </h3>
                                 <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
                             </div>
-                            <div class="ds_task-list__task-status  ds_task-list__task-status--complete" aria-hidden="true">Completed</div>
+                            <strong class="ds_tag  ds_tag--green" aria-hidden="true">Completed</strong>
                         </li>
                         <li class="ds_task-list__task" id="task3">
                             <div class="ds_task-list__task-details">
@@ -71,7 +57,7 @@
                                 </h3>
                                 <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
                             </div>
-                            <div class="ds_task-list__task-status  ds_task-list__task-status--complete" aria-hidden="true">Completed</div>
+                            <strong class="ds_tag  ds_tag--green" aria-hidden="true">Completed</strong>
                         </li>
                         <li class="ds_task-list__task" id="task4">
                             <div class="ds_task-list__task-details">
@@ -80,7 +66,7 @@
                                 </h3>
                                 <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
                             </div>
-                            <div class="ds_task-list__task-status  ds_task-list__task-status--complete" aria-hidden="true">Completed</div>
+                            <strong class="ds_tag  ds_tag--green" aria-hidden="true">Completed</strong>
                         </li>
                     </ul>
                 </li>
@@ -95,7 +81,7 @@
                                 </h3>
                                 <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
                             </div>
-                            <div class="ds_task-list__task-status" aria-hidden="true">In progress</div>
+                            <strong class="ds_tag  ds_tag--grey" aria-hidden="true">In progress</strong>
                         </li>
                         <li class="ds_task-list__task" id="task6">
                             <div class="ds_task-list__task-details">
@@ -104,7 +90,7 @@
                                 </h3>
                                 <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
                             </div>
-                            <div class="ds_task-list__task-status" aria-hidden="true">Cannot start yet</div>
+                            <strong class="ds_tag  ds_tag--grey" aria-hidden="true">Cannot start yet</strong>
                         </li>
                         <li class="ds_task-list__task" id="task7">
                             <div class="ds_task-list__task-details">
@@ -113,7 +99,7 @@
                                 </h3>
                                 <p class="ds_hint-text  ds_task-list__task-summary">Supporting text for task.</p>
                             </div>
-                            <div class="ds_task-list__task-status" aria-hidden="true">Not started</div>
+                            <strong class="ds_tag  ds_tag--grey" aria-hidden="true">Not started</strong>
                         </li>
                     </ul>
                 </li>
