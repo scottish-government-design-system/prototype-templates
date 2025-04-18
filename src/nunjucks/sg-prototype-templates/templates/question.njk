@@ -11,69 +11,55 @@
 </a>
 {% endblock %}
 
-{# Use an empty siteBrandingTitle block to only show the logo for site branding #}
-{% block siteBrandingTitle %}
-{% endblock %}
-
 {# Use an empty siteSearch block to hide the search from the header #}
 {% block siteSearch %}{% endblock %}
 
-{# 'Part of' notification message - in place of breadcrumbs #}
-{% block breadcrumbs %}
-<div class="ds_wrapper">
-    <nav class="ds_notification-message">
-        <h3 class="ds_notification-message__title">
-            Part of
-        </h3>
-        <div class="ds_notification-message__body">
-            <p><a href="/path/of/start/page">Title of application form</a></p>
-        </div>
-    </nav>
-</div>
-{% endblock %}
-
 {% block main %}
 <div class="ds_wrapper">
+    <a class="ds_back-link" href="#">Back to 'Name of service'</a>
     <main id="main-content" class="ds_layout  ds_layout--question-page">
 
         {% block mainContent %}
         <div class="ds_layout__content">
             
             {# Set the action attribute to the next page in your form's journey #}
-            <form action="/path/of/next/page" method="post">
-                <div class="ds_question">
-                    <fieldset>
-                        <legend class="ds_page-header">
-                            <h1 class="ds_page-header__title">
-                                This is a question
-                            </h1>
-                        </legend>
-
-                        {# Example of a form input - in this case a date input with datepicker #}
-                        <div data-module="ds-datepicker" class="ds_datepicker">
-                            <label class="ds_label" for="chosen-date">Date</label>
-                            <p class="ds_hint-text">Use dd/mm/yyyy format. For example, 31/01/2023.</p>
-                            <div class="ds_input__wrapper">
-                                <input id="chosen-date" name="chosen-date" type="text" class="ds_input  ds_input--fixed-10">
+            <form action="/path/of/next/page" method="post" class="ds_form">
+                <div class="ds_form__content">
+                    <div class="ds_question">
+                        <fieldset aria-describedby="hint-id">
+                            <legend class="ds_page-header">
+                                <span class="ds_page-header__label  ds_content-label">Context heading</span>
+                                <h1 class="ds_page-header__title">
+                                    Question heading
+                                </h1>
+                            </legend>
+                            <p class="ds_hint-text" id="hint-id">Hint text to help answer</p>
+                            <div class="ds_datepicker  ds_datepicker--multiple" data-module="ds-datepicker">
+                                <div class="ds_datepicker__input-wrapper">
+                                    <div>
+                                        <label class="ds_label" for="day">Day</label>
+                                        <input id="day" name="day" class="ds_input ds_input--fixed-2  js-datepicker-date">
+                                    </div>
+                                    <div>
+                                        <label class="ds_label" for="month">Month</label>
+                                        <input id="month" name="month" class="ds_input ds_input--fixed-2  js-datepicker-month">
+                                    </div>
+                                    <div>
+                                        <label class="ds_label" for="year">Year</label>
+                                        <input id="year" name="year" class="ds_input ds_input--fixed-4  js-datepicker-year">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        
-                    </fieldset>
+                        </fieldset>
+                    </div>
                 </div>
-                <div class="button-group">
-                    <a href="/path/of/prev/page" class="ds_button  ds_button--cancel  ds_button--has-icon  ds_button--has-icon--left">
-                        <svg class="ds_icon" aria-hidden="true" role="img"><use href="{{ assetPath }}/images/icons/icons.stack.svg#chevron_left"></use></svg>
-                        Back
-                    </a>
-                    <button class="ds_button  ds_button--has-icon">
-                        Next
-                        <svg class="ds_icon" aria-hidden="true" role="img"><use href="{{ assetPath }}/images/icons/icons.stack.svg#chevron_right"></use></svg>
-                    </button>
+                <div class="ds_form__actions">
+                    <div class="button-group">
+                        <a href="/path/of/prev/page" class="ds_button  ds_button--secondary">Back</a>
+                        <button class="ds_button" type="submit">Continue</button>
+                    </div>
                 </div>
             </form>
-
-            
-
 
         </div>
         {% endblock %}
