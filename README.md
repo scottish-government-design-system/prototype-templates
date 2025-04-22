@@ -16,6 +16,13 @@ The Scottish Government Design System does not require the GOV.UK Design System 
 2. in the browser, navigate to the 'Manage your prototype' section and go to 'Plugins'
 3. click on the uninstall button of the plugins you wish to remove
 
+## Alternative install using online code editors
+If you are unable to install Node on your machine, it is possible to use the GOV.UK Prototype Kit with online code editors such as [GitHub Codespaces](https://github.com/codespaces).
+1. Sign up for a [GitHub account](https://github.com/signup) if you don't have one
+2. Go to [GitHub Codespaces](https://github.com/codespaces)
+3. Use the 'Blank' quick start template to create a new codespace
+4. Follow the installation instructions above to install the GOV.UK Prototype Kit and then the Scottish Government plugins
+
 ## How to use the Scottish Government Design System Prototype Templates plugin
 1. in the browser, navigate to the 'Manage your prototype' section and go to 'Templates'
 2. create pages using the available templates
