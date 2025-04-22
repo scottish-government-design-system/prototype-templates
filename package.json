@@ -1,7 +1,7 @@
 {
   "name": "@scottish-government-design-system/prototype-templates",
   "description": "Construct prototypes using the Scottish Government Design System.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": {
     "name": "Scottish Government Digital Design system team",
     "email": "designsystem@gov.scot",
