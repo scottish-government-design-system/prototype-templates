@@ -10,7 +10,7 @@
 {% block main %}
 <div class="ds_wrapper">
     <a class="ds_back-link" href="#">Back to 'Name of service'</a>
-    <main id="main-content" class="ds_layout  ds_layout--article">
+    <main id="main-content" class="ds_layout  ds_layout--question">
 
         {% block mainHeader %}
         <div class="ds_layout__header">
@@ -23,84 +23,127 @@
         {% block mainContent %}
         <div class="ds_layout__content">
             
-            <h2>Heading for first group of answers</h2>
-            <ul class="ds_summary-list">
-                <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is an example question?</span> <span class="ds_summary-list__value" id="q1"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
-                    <div class="ds_summary-list__actions">
-                        <ul class="ds_summary-list__actions-list">
-                            <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q1">Change <span class="visually-hidden">your answer for: <q>This is an example question?</q></span></button></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is another different example question?</span> <span class="ds_summary-list__value" id="q2"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
-                    <div class="ds_summary-list__actions">
-                        <ul class="ds_summary-list__actions-list">
-                            <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q2">Change <span class="visually-hidden">your answer for: <q>This is another different example question?</q></span></button></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+            <h2>Personal details</h2>
+                <ul class="ds_summary-list">
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-personal1-key">Name</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">Jane Smith</q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-personal1-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-personal2-key">Date of birth</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">19 March 1983</q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-personal2-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-personal3-key">Customer reference</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">Not provided</q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-personal3-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-personal4-key">Address</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">Victoria Quay<br>Edinburgh<br>EH6 6QQ</q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-personal4-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-personal5-key">Contact details</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">
+                                <ul class="ds_no-bullets">
+                                    <li><q class="ds_summary-list__answer">07890 135468</q></li>
+                                    <li><q class="ds_summary-list__answer">jane.smith@example.com</q></li>
+                                </ul>
+                            </q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-personal5-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <h2>Application details</h2>
 
-            <h2>Heading for second group of answers</h2>
-            <h3>Subheading for group of summary cards</h3>
-            <div class="ds_summary-card">
-                <div class="ds_summary-card__header">
-                    <h3 class="ds_summary-card__header-title">Joe Bloggs</h3>
-                    <ul class="ds_summary-card__actions-list">
-                        <li class="ds_summary-card__actions-list-item"><button class="ds_link"> Change <span class="visually-hidden">your answers for: <q>Joe Bloggs</q></span> </button></li>
-                    </ul>
-                </div>
-                <div class="ds_summary-card__content">
-                    <ul class="ds_summary-list">
-                        <li class="ds_summary-list__item"><span class="ds_summary-list__key">Phone number</span> <span class="ds_summary-list__value"> <span class="visually-hidden">Your answer is:</span> <q class="ds_summary-list__answer">01234 567 890</q> </span></li>
-                        <li class="ds_summary-list__item"><span class="ds_summary-list__key">Address</span> <span class="ds_summary-list__value"> <span class="visually-hidden">Your answer is:</span> <q class="ds_summary-list__answer">Victoria Quay<br>
-                            Edinburgh<br>
-                            EH6 6QQ</q></span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="ds_summary-card">
-                <div class="ds_summary-card__header">
-                    <h3 class="ds_summary-card__header-title">Mary Smith</h3>
-                    <ul class="ds_summary-card__actions-list">
-                        <li class="ds_summary-card__actions-list-item"><button class="ds_link"> Change <span class="visually-hidden">your answers for: <q>Mary Smith</q></span> </button></li>
-                    </ul>
-                </div>
-                <div class="ds_summary-card__content">
-                    <ul class="ds_summary-list">
-                        <li class="ds_summary-list__item"><span class="ds_summary-list__key">Phone number</span> <span class="ds_summary-list__value"> <span class="visually-hidden">Your answer is:</span> <q class="ds_summary-list__answer">01234 098 765</q> </span></li>
-                        <li class="ds_summary-list__item"><span class="ds_summary-list__key">Address</span> <span class="ds_summary-list__value"> <span class="visually-hidden">Your answer is:</span> <q class="ds_summary-list__answer">St. Andrew's House<br>
-                            Regent Road<br>
-                            Edinburgh<br>
-                            EH1 3DG</q></span></li>
-                    </ul>
-                </div>
-            </div>
-            <h3>Another subheading</h3>
-            <ul class="ds_summary-list">
-                <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is an example question?</span> <span class="ds_summary-list__value" id="q3"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer"><ul class="ds_no-bullets"><li>Answer part one</li><li>Answer part two</li></ul></q></span>
-                    <div class="ds_summary-list__actions">
-                        <ul class="ds_summary-list__actions-list">
-                            <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q3">Change <span class="visually-hidden">your answer for: <q>This is an example question?</q></span></button></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="ds_summary-list__item"><span class="ds_summary-list__key">This is another different example question?</span> <span class="ds_summary-list__value" id="q4"> <span class="visually-hidden">Your answer is: </span> <q class="ds_summary-list__answer">My answer</q></span>
-                    <div class="ds_summary-list__actions">
-                        <ul class="ds_summary-list__actions-list">
-                            <li class="ds_summary-list__actions-list-item"><button class="ds_link" aria-describedby="q4">Change <span class="visually-hidden">your answer for: <q>This is another different example question?</q></span></button></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+                <ul class="ds_summary-list">
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-application1-key">Previous application number</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">12345678</q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-application1-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-application2-key">Licence type</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">For personal use</q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-application2-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-application3-key">Home address</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">Victoria Quay<br>Edinburgh<br>EH6 6QQ</q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-application3-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                    <li class="ds_summary-list__item">
+                        <span class="ds_summary-list__key" id="item-application4-key">Licence period</span>
+                        <span class="ds_summary-list__value">
+                            <q class="ds_summary-list__answer">Valid for 6 months</q>
+                        </span>
+                        <div class="ds_summary-list__actions">
+                            <button type="button" class="ds_link" aria-describedby="item-application4-key">
+                                Change
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <h2>Now send your application</h2>
+                <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
-            <div class="button-group">
-                <a href="/path/of/next/page" class="ds_button">
-                    Submit application
-                </a>
+                <form action="/confirmation" method="post" novalidate>
+                    <div class="ds_button-group">
+                        <a href="/path/of/prev/page" class="ds_button ds_button--secondary">Back</a>
+                        <button class="ds_button" type="submit">Accept and send</button>
+                    </div>
+                </form>
             </div>
-
-        </div>
         {% endblock %}
 
     </main>
