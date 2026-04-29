@@ -6,6 +6,13 @@ Changes are grouped under the labels: `Added`, `Changed`, `Deprecated`,
 `Removed`, `Fixed`, and `Security`.
 
 ---
+## 0.5.0
+### Changed
+- Updated to use v4.0.0 of the Scottish Government Design System
+- Card navigation page template changed to use new card and card grid markup
+### Removed
+- Separate JavaScript initialisation of date picker no longer needed as icon now part of the component
+
 ## 0.4.0
 ### Added
 - Navigation page templates

@@ -147,16 +147,20 @@
         </div>
         {% block bodyEnd %}
             {%- for scriptConfig in pluginConfig.scripts %}
-            {%- if (scriptConfig.src === '/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src/scripts/designsystem-templates.js')
-               or (scriptConfig.src === '/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src/scripts/js-enabled.js') -%}
-                {# Skip scripts from this plugin as it will be included at the end #}
-            {%- else -%}
-                {%- if scriptConfig.type|length -%}
-                    <script type="{{scriptConfig.type}}" src="{{scriptConfig.src}}"></script>
+                {%- if (scriptConfig.src === '/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src/scripts/designsystem-templates.js')
+                or (scriptConfig.src === '/plugin-assets/%40scottish-government-design-system%2Fprototype-templates/src/scripts/js-enabled.js') -%}
+                    {# Skip scripts from this plugin as it will be included at the end #}
                 {%- else -%}
-                    <script src="{{scriptConfig.src}}"></script>
-                {% endif -%}
-            {%- endif -%}
+                    {%- if (scriptConfig.src === '/plugin-assets/%40scottish-government%2Fdesign-system/dist/scripts/design-system.js') -%}
+                    <script type="module" src="{{scriptConfig.src}}"></script>
+                    {%- else -%}
+                        {%- if scriptConfig.type|length -%}
+                            <script type="{{scriptConfig.type}}" src="{{scriptConfig.src}}"></script>
+                        {%- else -%}
+                            <script src="{{scriptConfig.src}}"></script>
+                        {% endif -%}
+                    {%- endif -%}
+                {%- endif -%}
             {%- endfor -%} 
             {# Load script from this plugin last which initialises window.DS #}
             <script src="{{ assetPathTemplates }}/scripts/designsystem-templates.js"></script>
