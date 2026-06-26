@@ -6,6 +6,10 @@ Changes are grouped under the labels: `Added`, `Changed`, `Deprecated`,
 `Removed`, `Fixed`, and `Security`.
 
 ---
+## 0.6.0
+### Changed
+- Updated to use v4.1.1 of the Scottish Government Design System
+
 ## 0.5.0
 ### Changed
 - Updated to use v4.0.0 of the Scottish Government Design System
