@@ -27,6 +27,11 @@ If you are unable to install Node on your machine, it is possible to use the GOV
 1. in the browser, navigate to the 'Manage your prototype' section and go to 'Templates'
 2. create pages using the available templates
 
+### Update asset path
+If using components from the Scottish Government Design System, with any of these templates, you should update any paths that refer to images and icons on your pages to use the `assetpath` nunjucks variable.
+1. Identify the image path for a given component, for example the 'confirmation' notification message component looks for a icon at the following path: `/assets/images/icons/icons.stack.svg#check_circle`
+2. Update the path to point to where 'assets' are stored in the prototype, for example the 'confirmation' notification should have the icon path changed to `{{ assetPath }}/images/icons/icons.stack.svg#check_circle`
+
 View [more information on templates](https://github.com/scottish-government-design-system/prototype-templates/blob/main/docs/templates.md).
 
 ## Feedback, help and support
