@@ -18,6 +18,9 @@
   "nunjucksPaths": [
     "/src/nunjucks/"
   ],
+  "importNunjucksMacrosInto": [
+    "/src/nunjucks/sg-prototype-templates/layouts/_base-layout.njk"
+  ],
   "templates": [
     {
       "path": "/src/nunjucks/sg-prototype-templates/templates/article.njk",
@@ -73,7 +76,7 @@
   "pluginDependencies": [
 	  {
 	    "packageName": "@scottish-government/design-system",
-      "minVersion": "4.1.1"
+      "minVersion": "4.3.0"
     }
 	]
 }
