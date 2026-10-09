@@ -6,6 +6,13 @@ Changes are grouped under the labels: `Added`, `Changed`, `Deprecated`,
 `Removed`, `Fixed`, and `Security`.
 
 ---
+## 0.7.0
+### Added
+- Documentation added to readme.md on setting asset paths
+- Option to use nunjucks macros, from other plugins, on your pages
+### Changed
+- Updated to use v4.3.0 of the Scottish Government Design System
+
 ## 0.6.0
 ### Changed
 - Updated to use v4.1.1 of the Scottish Government Design System
